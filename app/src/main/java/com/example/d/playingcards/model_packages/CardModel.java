@@ -4,14 +4,14 @@ public class CardModel {
 
     private String value;
     private String suit;
-    private ImageModel imageModel;
     private String image;
+    private String code;
 
-    public CardModel(String value, String suit, ImageModel imageModel, String image) {
+    public CardModel(String value, String suit, String image, String code) {
         this.value = value;
         this.suit = suit;
-        this.imageModel = imageModel;
         this.image = image;
+        this.code = code;
     }
 
     public String getValue() {
@@ -22,12 +22,12 @@ public class CardModel {
         return suit;
     }
 
-    public ImageModel getImageModel() {
-        return imageModel;
-    }
-
     public String getImage() {
         return image;
+    }
+
+    public String getCode() {
+        return code;
     }
 }
 

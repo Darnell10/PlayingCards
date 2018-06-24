@@ -2,6 +2,7 @@ package com.example.d.playingcards.presentation;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,11 @@ public class CardsRvAdapter extends RecyclerView.Adapter<CardsRvAdapter.CardView
         return cardModelList.size();
     }
 
+    public void moreCards(List<CardModel> cardModels){
+
+        //Log.d("size?", cardModels.size()+"");
+        cardModelList.addAll(cardModels);
+    }
 
     public static class CardViewHolder extends RecyclerView.ViewHolder {
         private ImageView cardImageView;
@@ -54,7 +60,7 @@ public class CardsRvAdapter extends RecyclerView.Adapter<CardsRvAdapter.CardView
         }
 
         public void onBind(CardModel cardModel) {
-            Picasso.with(cardImageView.getContext())
+            Picasso.with(itemView.getContext())
                     .load(cardModel.getImage())
                     .into(cardImageView);
         }

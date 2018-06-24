@@ -8,14 +8,14 @@ public class ResponseModel {
     private  boolean shuffled;
     private String deck_id;
     private int remaining;
-    private List<CardModel> cardModelList;
+    private List<CardModel> cards;
 
-    public ResponseModel(boolean success, boolean shuffled, String deck_id, int remaining, List<CardModel> cardModelList) {
+    public ResponseModel(boolean success, boolean shuffled, String deck_id, int remaining, List<CardModel> cards) {
         this.success = success;
         this.shuffled = shuffled;
         this.deck_id = deck_id;
         this.remaining = remaining;
-        this.cardModelList = cardModelList;
+        this.cards = cards;
     }
 
     public boolean isSuccess() {
@@ -34,7 +34,7 @@ public class ResponseModel {
         return remaining;
     }
 
-    public List<CardModel> getCardModelList() {
-        return cardModelList;
+    public List<CardModel> getcards() {
+        return cards;
     }
 }
